@@ -1,0 +1,11 @@
+#main-payment-and-delivery {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 960px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование по горизонтали */
+}

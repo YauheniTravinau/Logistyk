@@ -1,0 +1,55 @@
+/* Стили для футера */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Стили для контейнера с содержимым футера */
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для параграфа с копирайтом */
+.footer-content p {
+    margin: 0;
+}
+
+/* Стили для иконки Facebook и Instagram в футере */
+.footer-content a {
+    margin-left: 10px;
+    text-decoration: none;
+    display: flex; /* Добавляем flex-контейнер для иконок и текста */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+}
+
+.footer-content img {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px; /* Добавляем небольшой отступ между иконкой и текстом */
+    transition: filter 0.3s ease;
+}
+
+/* Изменение фильтра при наведении на изображение Facebook и Instagram */
+.footer-content img:hover {
+    filter: brightness(1.2);
+}
+
+
+/* Стили для контейнера с изображениями компаний */
+.row-of-images {
+    display: flex;
+    justify-content: center; /* Центрировать по горизонтали */
+    align-items: center; /* Центрировать по вертикали */
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.row-of-images img {
+    width: 70px;
+    height: auto;
+    margin: 10px;
+}

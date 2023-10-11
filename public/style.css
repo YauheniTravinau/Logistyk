@@ -1,0 +1,189 @@
+/* Стили для заднего фона страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    position: relative; /* Добавляем позицию относительно body */
+}
+
+/* Стили для заднего фона на весь экран */
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Высота на весь экран */
+    overflow: hidden; /* Прячем лишнее содержимое, которое может вылезти за пределы экрана */
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Масштабируем изображение так, чтобы оно полностью покрывало задний фон */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Задаем фону нижний z-index, чтобы он был под всем остальным контентом */
+}
+
+/* Затемнение фотографии */
+.background::before {
+    content: ""; /* Создаем пустой элемент (псевдоэлемент) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Задаем цвет затемнения с прозрачностью (0.6), где 0 - полностью прозрачный, 1 - полностью непрозрачный */
+    z-index: 0; /* Задаем псевдоэлементу тот же z-index, что и у фотографии, чтобы они были на одном уровне */
+}
+
+
+/* Стили для текста на изображении */
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 18px; /* Уменьшили размер шрифта */
+    padding: 10px; /* Уменьшили внутренний отступ */
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold; /* Сделали текст жирным */
+}
+
+/* Стили для параграфов под текстом */
+.image-text p {
+    font-size: 25px; /* Уменьшили размер шрифта для параграфов */
+    margin: 4px 0; /* Добавили небольшой внешний отступ сверху и снизу для параграфов */
+}
+/* Стили для первой строки */
+.image-text p:first-child {
+    font-weight: bold; /* Сделали первую строку жирной */
+    font-size: 70px; /* Увеличили размер шрифта для первой строки */
+}
+/* Стили для второй строки */
+.image-text p:nth-child(2) {
+    font-weight: bold; /* Сделали вторую строку жирной */
+    font-size: 55px; /* Увеличили размер шрифта для первой строки */
+}
+
+
+
+
+/* Стили для значка WhatsApp */
+#support-button {
+    position: fixed; /* Закрепляем значок WhatsApp */
+    bottom: 80px; /* Увеличьте значение, чтобы поднять значок выше */
+    right: 20px; /* Оставьте значение right без изменений или увеличьте по необходимости */
+    z-index: 10000; /* Увеличьте значение z-index, чтобы он был выше остального содержимого */
+}
+
+
+
+#support-button a {
+    display: inline-block;
+    background-color: transparent; /* Задний фон прозрачный */
+    color: #fff;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 50px;
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+#support-button a img {
+    width: 100%; /* Заполнение всего доступного места внутри контейнера */
+    height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
+    background-color: transparent;
+    transition: content 0.3s ease; /* Плавное изменение изображения при наведении */
+}
+
+/* Замена изображения при наведении */
+#support-button a:hover img {
+    content: url('images/whatsapp-icon2.png'); /* Заменяем изображение WhatsApp при наведении */
+}
+
+/* Измененный цвет WhatsApp при наведении */
+#support-button a:hover {
+    background-color: transparent; /* Меняем цвет WhatsApp на прозрачный при наведении */
+}
+
+/* Стили для контейнера main */
+#main {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Стили для кнопки "Подробнее" */
+.learn-more-button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    margin-top: 20px; /* Добавляем отступ сверху, чтобы опустить кнопку ниже */
+}
+
+.learn-more-button:hover {
+    background-color: white;
+    color: #333;
+}
+
+/* Стили для изображений в строчку */
+.row-of-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-of-images img {
+    width: 100px; /* Установите желаемую ширину изображения */
+    height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
+    margin: 1000px 10px 20px 10px; /* Добавьте отступ между изображениями */
+}
+
+
+/* Стили для контейнера с изображениями магазинов */
+.shops-of-images {
+    display: flex;
+    justify-content: center; /* Центрировать по горизонтали */
+    align-items: center; /* Центрировать по вертикали */
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.shops-of-images img {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+}
+
+
+/* Стили для разделителя hr */
+hr {
+    border: none; /* Убираем стандартную границу */
+    border-top: 2px solid #000000; /* Задаем верхнюю границу толщиной 2px и цветом белый (или любым другим) */
+    width: 50%; /* Задаем ширину разделителя */
+    margin: 20px auto; /* Выравниваем по центру с отступами сверху и снизу */
+}
+
+
+
+
+
+
+
+

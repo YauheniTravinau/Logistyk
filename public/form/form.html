@@ -1,0 +1,95 @@
+<!-- Код формы Formspree не подключена надо доработать  -->
+<form
+        id="contactForm"
+        action="https://formspree.io/f/xqkvgjrw"
+        method="POST"
+>
+    <div class="form-group">
+        <label for="fullName">ФИО:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Введите ФИО">
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Телефон/WhatsApp:</label>
+        <input type="text" id="phone" name="phone" placeholder="Введите номер телефона">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" placeholder="Введите адрес электронной почты">
+    </div>
+
+    <div class="form-group">
+        <label for="Productweight">Вес товара:</label>
+        <input type="text" id="Productweight" name="Productweight" placeholder="Вес товара">
+    </div>
+
+    <div class="form-group">
+        <label for="productName">Название товара:</label>
+        <input type="text" id="productName" name="productName" placeholder="Введите название товара">
+    </div>
+
+    <div class="form-group">
+        <label for="customer">Для кого покупаете:</label>
+        <select id="customer" name="customer">
+            <option value="USDT">Для себя</option>
+            <option value="RUR">Я магазин</option>
+            <option value="EUR">Я компания</option>
+            <option value="USD">Я посредник</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Paymentmethod">Метод оплаты:</label>
+        <select id="Paymentmethod" name="Paymentmethod">
+            <option value="RUR">RUB - Банк России</option>
+            <option value="EUR">EUR - Перевод в Европу</option>
+            <option value="USD">USD - Перевод в Европу</option>
+            <option value="USDT">USDT - Перевод на крипто-кошелек</option>
+            <option value="PLN">PLN - Перевод в Европу</option>
+            <option value="buyitmyself">Куплю сам на Ваш адрес</option>
+            <option value="bringcash">Привезу наличные к Вам(в Минск или Гродно)</option>
+            <option value="other">Другой способ</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="totalCost">Примерная общая стоимость:</label>
+        <input type="text" id="totalCost" name="totalCost" placeholder="Введите примерную общую стоимость">
+    </div>
+
+    <div class="form-group">
+        <label for="currency">Валюта:</label>
+        <select id="currency" name="currency">
+            <option value="RUR">RUB</option>
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="USDT">USDT</option>
+            <option value="PLN">PLN</option>
+            <option value="other">Другая валюта</option>
+        </select>
+    </div>
+
+    <div id="additionalLinks">
+        <div class="additional-link-input">
+            <label for="additionalLink1">Ссылка на товар:</label>
+            <input type="url" id="additionalLink1" name="additionalLinks[]" placeholder="Введите дополнительные ссылки">
+        </div>
+        <div class="additional-link-input">
+            <label for="quantity1">Количество:</label>
+            <input type="number" id="quantity1" name="quantities[]" placeholder="Количество">
+        </div>
+    </div>
+    <button type="button" id="addLinkButton">Добавить еще одну ссылку</button>
+
+
+
+
+    <div class="form-group">
+        <label for="description">Описание (до 1500 знаков):</label>
+        <textarea id="description" name="description" maxlength="1500" placeholder="Введите описание товара"></textarea>
+    </div>
+
+    <button type="submit">Отправить</button>
+</form>
+<!-- Конец кода формы Formspree -->

@@ -1,0 +1,45 @@
+
+<button id="openCalculator">Быстрый расчёт</button>
+<div class="input-block">
+    <label for="productPrice">Цена товара:</label>
+    <input type="text" id="productPrice" placeholder="Цена товара" maxlength="5" size="10">
+    <label for="shippingPrice">Цена доставки к нам на склад:</label>
+    <input type="text" id="shippingPrice" placeholder="Цена доставки к нам на склад" maxlength="5" size="23">
+    <label for="quantityFrom">Количество:</label>
+    <input type="text" id="quantityFrom" placeholder="Кол-во" maxlength="5" class="small-field">
+    <label for="currency">Валюта товара:</label>
+    <select id="currency">
+        <option value="PLN">PLN</option>
+        <option value="EUR">EUR</option>
+        <option value="RUB">RUB</option>
+        <option value="USD">USD</option>
+        <option value="USDT">USDT</option>
+    </select>
+</div>
+<div class="input-block">
+    <label for="length">Длина/см:</label>
+    <input type="text" id="length" placeholder="Длина/см" maxlength="5" size="10">
+    <label for="width">Ширина/см:</label>
+    <input type="text" id="width" placeholder="Ширина/см" maxlength="5" size="10">
+    <label for="height">Высота/см:</label>
+    <input type="text" id="height" placeholder="Высота/см" maxlength="5" size="10">
+    <label for="productWeight">Вес/кг:</label>
+    <input type="text" id="productWeight" placeholder="Вес/кг" maxlength="5" class="small-field">
+</div>
+<div class="input-block">
+    <label for="sanctions">Под санкциями:</label>
+    <select id="sanctions">
+        <option value="Да">Под санкциями - Да</option>
+        <option value="Нет">Под санкциями - Нет</option>
+        <option value="Не знаю">Под санкциями - Не знаю</option>
+    </select>
+</div>
+    <button id="calculate">Рассчитать</button>
+    <h3>Результат:</h3>
+    <p>Цена в USDT: <span id="resultUSDT"></span></p>
+    <p>Цена в EUR: <span id="resultEUR"></span></p>
+    <p>Цена в USD: <span id="resultUSD"></span></p>
+    <p>Цена в RUB: <span id="resultRUB"></span></p>
+    <p>Мы купим товар за: <span id="buyPrice"></span></p>
+    <p>Мы доставим товар за: <span id="shippingCost"></span></p>
+<script src="../kalkulator/kalkulator.js"></script>

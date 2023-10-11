@@ -1,0 +1,124 @@
+/* Стили для блока "main-about" */
+#main-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Изменено на центрирование по горизонтали */
+    max-width: 960px;
+    margin: 5cm auto 0; /* Оставляем центрирование по вертикали */
+}
+
+/* Стили для блоков "country-block" с классом "custom" */
+.country-block.custom {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e6e6fa; /* Популярный цвет (синий), можно заменить на другой */
+}
+
+
+
+/* Стили для блоков стран "country-block" */
+.country-block {
+    flex-basis: calc(33.33% - 20px);
+    margin-top: 40px; /* Измените значение на ваш выбор */
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Стили для первого блока стран при его индексе */
+.first-country-block:nth-of-type(1) {
+    background-color: #dc143c; /* Цвет флага Польши */
+    color: white; /* Цвет текста для контраста */
+    border-radius: 10px; /* Закругление углов */
+    text-align: center; /* Центрирование текста */
+    margin-right: 2cm; /* Расстояние между блоками 1 см */
+    padding: 10px;
+}
+
+/* Стили для псевдоэлемента ::before блока "country-block" */
+.first-country-block:nth-of-type(1)::before {
+    content: ""; /* Уберем содержимое псевдоэлемента */
+}
+
+
+/* Стили для "country-block" при наведении */
+.country-block:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для псевдоэлемента ::before при наведении на "country-block" */
+.country-block::before {
+    content: "•";
+    color: transparent; /* Сначала точка прозрачная */
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Стили для псевдоэлемента ::before при наведении на "country-block" */
+.country-block:hover::before {
+    color: red; /* При наведении делаем точку красной и видимой */
+}
+
+/* Стили для выделенных слов "highlight" */
+.highlight {
+    font-weight: bold; /* Жирный шрифт для выделения ключевых слов */
+    font-family: Arial, sans-serif; /* Шрифт текста */
+}
+
+/* Стили для блока "expandable" */
+.expandable {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Стили для кнопки "expand-button" */
+.expand-button {
+    cursor: pointer;
+}
+
+/* Убираем псевдоэлемент ::before и добавляем символ напрямую в содержимое кнопки "expand-button" */
+.expand-button {
+    cursor: pointer;
+    position: relative;
+}
+
+.expand-button::before {
+    content: "";
+    display: none;
+}
+
+/* Изменяем цвет значка на красный и добавляем контур элементу "expand-button" */
+.expand-button::after {
+    content: "▶";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: red; /* Цвет значка */
+    border: 2px solid red; /* Добавляем контур */
+    padding: 5px 10px; /* Добавляем отступ вокруг значка */
+}
+
+
+/* Стили для псевдоэлемента ::after кнопки "expand-button" при развернутом состоянии */
+.expand-button.expanded::after {
+    content: "▼"; /* Символ, показывающий, что блок развернут */
+}
+
+
+
+
+

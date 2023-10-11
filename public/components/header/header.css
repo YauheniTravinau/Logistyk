@@ -1,0 +1,75 @@
+/* Стили для шапки (header) */
+#header {
+    background-color: rgb(230, 230, 250, 0.7); /* Прозрачный белый фон с альфа-каналом 0.5 (50% прозрачности) */
+    color: #000; /* Цвет текста в шапке (черный) */
+    padding: 0; /* Внутренний отступ сверху и снизу в шапке */
+    position: fixed; /* Закрепляем шапку */
+    top: 1.2cm; /* Отступ сверху в 1.5 см */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Поверх всех окон */
+}
+
+
+
+.header-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-main h1 {
+    font-size: 24px; /* Размер шрифта заголовка */
+    margin: 0; /* Убираем внешний отступ заголовка */
+}
+
+.contact-icons {
+    display: flex; /* Отображаем иконки и ссылки в строку */
+    gap: 10px; /* Расстояние между иконками и ссылками */
+}
+
+.contact-icons a {
+    display: inline-block; /* Размещаем иконки и ссылки в строку */
+    text-decoration: none; /* Убираем подчеркивание для ссылок */
+}
+
+.contact-icons a:hover img {
+    filter: invert(20%) sepia(95%) saturate(390%) hue-rotate(180deg) brightness(90%); /* Применяем фильтр при наведении */
+}
+
+.contact-icons img {
+    width: auto; /* Ширина изображений будет автоматически подстраиваться */
+    height: 32px; /* Высота иконок */
+    background-color: transparent; /* Задний фон PNG файлов будет прозрачным */
+}
+.contact-label {
+    display: none; /* Подсказки изначально скрыты */
+    position: absolute;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icons a:hover .contact-label {
+    display: inline-block; /* Отображаем подсказку при наведении */
+}
+
+#exchange-rates p {
+    display: flex; /* Используем flex-контейнер */
+    align-items: center; /* Центрируем элементы вертикально */
+}
+
+#exchange-rates img {
+    width: 0.7cm; /* Задаем ширину изображения (1 см) */
+    height: auto; /* Автоматическая высота */
+    margin-right: 10px; /* Отступ справа от изображения */
+}
+
+

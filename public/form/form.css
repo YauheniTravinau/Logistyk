@@ -1,0 +1,111 @@
+/* Остальные стили здесь */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+/* Добавленные стили для формы */
+#contactForm {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Добавленные стили для контейнера с полями и названиями полей */
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Добавленные стили для названий полей */
+label {
+    font-weight: bold;
+    display: block; /* Размещаем названия полей на новой строке */
+    margin-top: 10px; /* Добавляем небольшой отступ между названиями полей */
+}
+
+/* Добавленные стили для полей ввода */
+input[type="text"],
+input[type="email"],
+select,
+textarea,
+input[type="url"] { /* Включаем стили для поля ввода ссылки */
+    width: calc(66.66% - 10px); /* Устанавливаем ширину 66.66% с учетом промежутков между элементами */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #888; /* Цвет прозрачного текста */
+}
+
+/* Стили для поля ввода количества с шириной 1 см */
+input[type="number"] {
+    width: 4cm;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #888; /* Цвет прозрачного текста */
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder,
+input[type="url"]::placeholder { /* Включаем стили для плейсхолдера ссылки */
+    color: #ccc; /* Цвет прозрачного текста */
+}
+
+/* Стили для полей ввода ссылки и количества в одной строке */
+.additional-link-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.additional-link-input label {
+    margin-right: 10px;
+}
+
+
+/* Добавленные стили для кнопки "Добавить еще одну ссылку" */
+#addLinkButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Добавленные стили для кнопки "Отправить" */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Добавленные стили для кнопки "Отправить" при наведении */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для ссылок */
+a {
+    color: #007bff; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s; /* Плавное изменение цвета при наведении */
+}
