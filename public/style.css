@@ -181,7 +181,27 @@ hr {
 }
 
 
+@media screen and (max-width: 768px) {
+    .image-text {
+        font-size: 16px;
+    }
 
+    .image-text p {
+        font-size: 20px;
+    }
+
+    .image-text p:first-child {
+        font-size: 40px;
+    }
+
+    .image-text p:nth-child(2) {
+        font-size: 35px;
+    }
+
+    .learn-more-button {
+        font-size: 16px;
+    }
+}
 
 
 
