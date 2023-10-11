@@ -55,18 +55,21 @@ nav #burger-icon:hover {
         display: block; /* Отображаем изображение на узких экранах */
     }
 
-    ul {
+    #menu ul {
         display: none; /* Скрываем меню на узких экранах */
+        list-style: none;
+        padding: 0;
         flex-direction: column; /* Отображаем пункты меню вертикально */
         position: absolute; /* Размещаем меню сверху */
         top: 50px; /* Отступ сверху */
         background-color: #333; /* Цвет фона меню */
-        width: 100%; /* Занимаем всю доступную ширину */
+        width: 50%; /* Занимаем всю доступную ширину */
         z-index: 0; /* Помещаем меню под изображение */
+        left: 0; /* Прижимаем меню к левой стенке */
     }
 
-    ul.active {
-        display: flex; /* Отображаем меню, если оно активно */
+    #menu.active ul {
+        display: block;
     }
 
     li {

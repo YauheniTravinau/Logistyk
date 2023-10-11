@@ -117,12 +117,32 @@ body {
 #main {
     position: relative;
     text-align: center;
+    padding: 20px; /* Добавляем внутренний отступ для контейнера */
+    max-width: 100%; /* Ширина контейнера будет адаптироваться к размеру экрана */
+    box-sizing: border-box; /* Учитываем padding внутри max-width */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
 }
+
+/* Стили для содержимого внутри контейнера main */
+#main .content {
+    background-color: rgba(255, 255, 255, 0.7); /* Добавим непрозрачный фон для лучшей читаемости текста на фоне изображения */
+    padding: 20px; /* Внутренний отступ вокруг текста */
+    border-radius: 5px;
+    text-align: left; /* Выравнивание текста слева на мобильных устройствах */
+    font-size: 16px; /* Уменьшили размер шрифта для лучшей читаемости */
+    color: #333;
+    max-width: 100%; /* Адаптивная ширина контента */
+}
+
+/* Стили для заголовка внутри контейнера main */
+#main .content h1 {
+    font-size: 24px; /* Увеличили размер шрифта для заголовка */
+    margin: 20px 0; /* Добавили отступ сверху и снизу для заголовка */
+}
+
+
 
 /* Стили для кнопки "Подробнее" */
 .learn-more-button {
@@ -180,6 +200,22 @@ hr {
     margin: 20px auto; /* Выравниваем по центру с отступами сверху и снизу */
 }
 
+/* Стили для контейнера */
+.container {
+    max-width: 960px;
+    width: 90%; /* Чтобы контейнер масштабировался на мобильных устройствах */
+    margin: 0 auto;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+/* Стили для заголовков и пунктов */
+.container h4, .container p {
+    font-size: 18px; /* Уменьшил размер шрифта для лучшей читаемости на мобильных устройствах */
+    margin: 10px 0;
+}
 
 @media screen and (max-width: 768px) {
     .image-text {
@@ -202,6 +238,10 @@ hr {
         font-size: 16px;
     }
 }
+
+
+
+
 
 
 

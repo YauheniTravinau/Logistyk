@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const expandButton = document.querySelector(".expand-button");
     const expandable = document.querySelector(".expandable");
@@ -94,3 +95,36 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+// Находим кнопку по id
+const scrollButton = document.getElementById('scroll-button');
+
+// Добавляем обработчик события для клика
+scrollButton.addEventListener('click', function () {
+    // Находим высоту страницы
+    const pageHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+
+    // Устанавливаем отступ для мобильных устройств
+    const mobileOffset = 650;
+
+    // Устанавливаем отступ для остальных устройств
+    const desktopOffset = 150;
+
+    // Выбираем отступ в зависимости от типа устройства
+    const offset = window.innerWidth <= 768 ? mobileOffset : desktopOffset;
+
+    // Прокручиваем страницу к середине с отступом
+    window.scrollTo({
+        top: (pageHeight / 2 - offset),
+        behavior: 'smooth' // Для плавной прокрутки
+    });
+});
+
+// Прокрутить страницу наверх при загрузке
+window.addEventListener("beforeunload", function () {
+    window.scrollTo(0, 0);
+});
+
+
+
