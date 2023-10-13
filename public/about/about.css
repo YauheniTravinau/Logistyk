@@ -5,6 +5,8 @@
     justify-content: center; /* Изменено на центрирование по горизонтали */
     max-width: 960px;
     margin: 5cm auto 0; /* Оставляем центрирование по вертикали */
+    padding: 20px; /* Добавим отступы для контента */
+    text-align: center; /* Выравнивание по центру для всего контента */
 }
 
 /* Стили для блоков "country-block" с классом "custom" */
@@ -113,12 +115,30 @@
 }
 
 
-/* Стили для псевдоэлемента ::after кнопки "expand-button" при развернутом состоянии */
-.expand-button.expanded::after {
-    content: "▼"; /* Символ, показывающий, что блок развернут */
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    #main-about {
+        flex-direction: column; /* Вертикальное расположение на узких экранах */
+        max-width: 100%; /* Ширина на всю ширину экрана */
+    }
 }
 
+/* Стили для блоков "country-block" с классом "custom" */
+.country-block.custom {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e6e6fa;
+}
 
-
-
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .country-block.custom {
+        margin: 10px;
+    }
+}
 

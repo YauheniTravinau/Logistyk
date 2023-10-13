@@ -44,7 +44,6 @@ async function fetchExchangeRates() {
     }
 }
 
-// Проверяем наличие элементов на странице перед их загрузкой
 document.addEventListener("DOMContentLoaded", async function () {
     try {
         await includeContent("header", "../components/header/header.html");
@@ -72,10 +71,19 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         // Загружаем и отображаем курсы валют
         await fetchExchangeRates();
+
+        // Добавляем обработчик события клика на документ
+        document.addEventListener("click", function (event) {
+            // Проверяем, активно ли меню и был ли клик вне меню
+            if (menu.classList.contains("active") && !menu.contains(event.target)) {
+                menu.classList.remove("active"); // Закрываем меню
+            }
+        });
     } catch (error) {
         console.error(`Error loading content or fetching exchange rates: ${error}`);
     }
 });
+
 
 
 
@@ -97,34 +105,38 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Находим кнопку по id
-const scrollButton = document.getElementById('scroll-button');
+document.addEventListener("DOMContentLoaded", function () {
+    // Определите массив страниц, на которых код не должен выполняться
+    const excludedPages = [
+        "/about/about.html",
+        "/reviews/reviews.html",
+        "/translations/translations.html",
+        "/shop/shop.html",
+        "/payment-and-delivery/payment-and-delivery.html"
+    ];
 
-// Добавляем обработчик события для клика
-scrollButton.addEventListener('click', function () {
-    // Находим высоту страницы
-    const pageHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+    // Получите текущий URL
+    const currentURL = window.location.pathname;
 
-    // Устанавливаем отступ для мобильных устройств
-    const mobileOffset = 650;
+    // Проверьте, находитесь ли вы на странице, где код не должен выполняться
+    if (!excludedPages.includes(currentURL)) {
+        const scrollButton = document.getElementById('scroll-button');
+        const targetTextElement = document.getElementById('main'); // Замените на идентификатор или класс элемента, к которому нужно прокрутить
 
-    // Устанавливаем отступ для остальных устройств
-    const desktopOffset = 150;
-
-    // Выбираем отступ в зависимости от типа устройства
-    const offset = window.innerWidth <= 768 ? mobileOffset : desktopOffset;
-
-    // Прокручиваем страницу к середине с отступом
-    window.scrollTo({
-        top: (pageHeight / 2 - offset),
-        behavior: 'smooth' // Для плавной прокрутки
-    });
+        scrollButton.addEventListener('click', function () {
+            if (targetTextElement) {
+                const offset = targetTextElement.offsetTop;
+                window.scrollTo({
+                    top: offset,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
 });
 
-// Прокрутить страницу наверх при загрузке
-window.addEventListener("beforeunload", function () {
-    window.scrollTo(0, 0);
-});
+
+
 
 
 

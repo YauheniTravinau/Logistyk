@@ -1,11 +1,25 @@
+/* Стили для основного контейнера с отзывами */
 #main-reviews {
     position: relative;
     text-align: center;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    max-width: 960px; /* Максимальная ширина контейнера */
-    margin: 0 auto; /* Центрирование по горизонтали */
+    padding-top: 150px; /* Добавляем отступ сверху (настройте значение по вашему усмотрению) */
+}
+
+/* Общие стили для изображений */
+.review img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Центрирование изображения по горизонтали */
+}
+
+/* Стили для максимальной ширины контейнера отзывов (на маленьких экранах) */
+@media (max-width: 768px) {
+    .reviews-container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
 }
